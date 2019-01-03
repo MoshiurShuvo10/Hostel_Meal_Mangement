@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 27, 2018 1:02:46 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.myhostel.entity.CostList" table="cost_list" catalog="hostel" optimistic-lock="version">
+        <id name="slNo" type="java.lang.Integer">
+            <column name="sl_no" />
+            <generator class="identity" />
+        </id>
+        <property name="member" type="string">
+            <column name="Member" length="100" not-null="true" />
+        </property>
+        <property name="memberId" type="int">
+            <column name="member_id" not-null="true" />
+        </property>
+        <property name="date" type="string">
+            <column name="Date" length="100" not-null="true" />
+        </property>
+        <property name="cost" type="int">
+            <column name="Cost" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
